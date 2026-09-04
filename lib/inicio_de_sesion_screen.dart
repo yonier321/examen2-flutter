@@ -1,4 +1,4 @@
-// Archivo: lib/inicio_de_sesion_screen.dart
+
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -39,7 +39,7 @@ class InicioDeSesionScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          // Imagen y Encabezado de Fondo
+          // Imagen y Encabezado de Fondo (Carga desde assets)
           Positioned(
             top: 0,
             left: 0,
@@ -48,7 +48,7 @@ class InicioDeSesionScreen extends StatelessWidget {
             child: Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1000&auto=format&fit=crop'),
+                  image: AssetImage('assets/login_header.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -246,7 +246,7 @@ class InicioDeSesionScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
 
-                    // Botones Social Media
+                    // Botones Social Media (Google y Apple en assets)
                     Row(
                       children: [
                         Expanded(
@@ -259,8 +259,8 @@ class InicioDeSesionScreen extends StatelessWidget {
                               ),
                             ),
                             onPressed: () {},
-                            child: Image.network(
-                              'https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg',
+                            child: Image.asset(
+                              'assets/google_logo.png',
                               height: 20,
                               errorBuilder: (context, error, stackTrace) => const Icon(Icons.g_mobiledata, size: 24, color: Colors.black),
                             ),
