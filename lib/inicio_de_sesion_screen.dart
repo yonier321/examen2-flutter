@@ -1,9 +1,9 @@
-
+// Archivo: lib/inicio_de_sesion_screen.dart
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-
+// Cuando tu compañero suba su archivo de Catálogo, descomentas la siguiente línea:
+// import 'catalogo_screen.dart';
 
 class InicioDeSesionScreen extends StatelessWidget {
   const InicioDeSesionScreen({Key? key}) : super(key: key);
@@ -33,13 +33,11 @@ class InicioDeSesionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = GoogleFonts.lexend();
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          // Imagen y Encabezado de Fondo (Carga desde assets)
+          // Imagen y Encabezado de Fondo
           Positioned(
             top: 0,
             left: 0,
@@ -60,13 +58,13 @@ class InicioDeSesionScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 28.0),
                       child: RichText(
-                        text: TextSpan(
-                          style: GoogleFonts.lexend(
+                        text: const TextSpan(
+                          style: TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.w700,
                             letterSpacing: 1.5,
                           ),
-                          children: const [
+                          children: [
                             TextSpan(
                               text: 'VELOCE ',
                               style: TextStyle(color: Colors.white),
@@ -103,40 +101,40 @@ class InicioDeSesionScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Welcome Back',
-                      style: GoogleFonts.lexend(
+                      style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w700,
-                        color: const Color(0xFF111111),
+                        color: Color(0xFF111111),
                       ),
                     ),
                     const SizedBox(height: 6),
-                    Text(
+                    const Text(
                       'Sign in to access your premium collection',
-                      style: GoogleFonts.lexend(
+                      style: TextStyle(
                         fontSize: 13,
-                        color: const Color(0xFF757575),
+                        color: Color(0xFF757575),
                       ),
                     ),
                     const SizedBox(height: 28),
 
                     // Campo: Email Address
-                    Text(
+                    const Text(
                       'EMAIL ADDRESS',
-                      style: GoogleFonts.lexend(
+                      style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w600,
-                        color: const Color(0xFF4A4A4A),
+                        color: Color(0xFF4A4A4A),
                         letterSpacing: 0.5,
                       ),
                     ),
                     const SizedBox(height: 8),
                     TextField(
-                      style: textStyle.copyWith(fontSize: 14),
+                      style: const TextStyle(fontSize: 14),
                       decoration: InputDecoration(
                         hintText: 'name@luxury.com',
-                        hintStyle: textStyle.copyWith(color: const Color(0xFFB0B0B0), fontSize: 14),
+                        hintStyle: const TextStyle(color: Color(0xFFB0B0B0), fontSize: 14),
                         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -154,20 +152,20 @@ class InicioDeSesionScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           'PASSWORD',
-                          style: GoogleFonts.lexend(
+                          style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w600,
-                            color: const Color(0xFF4A4A4A),
+                            color: Color(0xFF4A4A4A),
                             letterSpacing: 0.5,
                           ),
                         ),
                         GestureDetector(
                           onTap: () {},
-                          child: Text(
+                          child: const Text(
                             'Forgot?',
-                            style: GoogleFonts.lexend(
+                            style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
                               color: primaryRed,
@@ -179,10 +177,10 @@ class InicioDeSesionScreen extends StatelessWidget {
                     const SizedBox(height: 8),
                     TextField(
                       obscureText: true,
-                      style: textStyle.copyWith(fontSize: 14),
+                      style: const TextStyle(fontSize: 14),
                       decoration: InputDecoration(
                         hintText: '••••••••',
-                        hintStyle: textStyle.copyWith(color: const Color(0xFFB0B0B0), fontSize: 14),
+                        hintStyle: const TextStyle(color: Color(0xFFB0B0B0), fontSize: 14),
                         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -213,9 +211,9 @@ class InicioDeSesionScreen extends StatelessWidget {
                           // Al integrar con la rama del Catálogo, descomentar:
                           // Navigator.push(context, _crearRutaAnimada(const CatalogoScreen()));
                         },
-                        child: Text(
+                        child: const Text(
                           'Login',
-                          style: GoogleFonts.lexend(
+                          style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
                             color: Colors.white,
@@ -227,26 +225,26 @@ class InicioDeSesionScreen extends StatelessWidget {
 
                     // Separador "OR CONTINUE WITH"
                     Row(
-                      children: [
-                        const Expanded(child: Divider(color: Color(0xFFE0E0E0))),
+                      children: const [
+                        Expanded(child: Divider(color: Color(0xFFE0E0E0))),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                          padding: EdgeInsets.symmetric(horizontal: 12.0),
                           child: Text(
                             'OR CONTINUE WITH',
-                            style: GoogleFonts.lexend(
+                            style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.w500,
-                              color: const Color(0xFF9E9E9E),
+                              color: Color(0xFF9E9E9E),
                               letterSpacing: 0.8,
                             ),
                           ),
                         ),
-                        const Expanded(child: Divider(color: Color(0xFFE0E0E0))),
+                        Expanded(child: Divider(color: Color(0xFFE0E0E0))),
                       ],
                     ),
                     const SizedBox(height: 20),
 
-                    // Botones Social Media (Google y Apple en assets)
+                    // Botones Social Media
                     Row(
                       children: [
                         Expanded(
@@ -287,13 +285,13 @@ class InicioDeSesionScreen extends StatelessWidget {
                     // Registro / Sign Up
                     Center(
                       child: RichText(
-                        text: TextSpan(
-                          style: GoogleFonts.lexend(fontSize: 13, color: const Color(0xFF666666)),
+                        text: const TextSpan(
+                          style: TextStyle(fontSize: 13, color: Color(0xFF666666)),
                           children: [
-                            const TextSpan(text: "Don't have an account? "),
+                            TextSpan(text: "Don't have an account? "),
                             TextSpan(
                               text: 'Sign up',
-                              style: GoogleFonts.lexend(
+                              style: TextStyle(
                                 color: primaryRed,
                                 fontWeight: FontWeight.w600,
                               ),
